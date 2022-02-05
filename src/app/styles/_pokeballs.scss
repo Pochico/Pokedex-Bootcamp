@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@700&display=swap&text=M");
+
+.pokeball-button {
+  --top: #f00;
+  --bottom: #fff;
+  --button: #f1f1f1;
+  --blur: 0;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  background: linear-gradient(
+    var(--top),
+    var(--top) 46%,
+    #000 46%,
+    #000 54%,
+    var(--bottom) 52%
+  );
+  border: 3px solid #000;
+  border-radius: 50%;
+  box-shadow: inset -5px -2px 0 0 rgba(0, 0, 0, 0.1);
+  animation: 1.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) 1, 0.4s alternate 5;
+  transition: 0.4s;
+}
+.pokeball-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 5px;
+  height: 5px;
+  background: radial-gradient(
+    var(--button),
+    var(--button) 50%,
+    #ccc 50%,
+    #ccc 60%,
+    #fff 60%
+  );
+  border: 3px solid #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 0.3s ease-in-out;
+  filter: blur(var(--blur));
+}
+
+.pokeball-button--great {
+  --top: #1182bf;
+  --stripe: #eb3937;
+}
+.pokeball-button--great::before {
+  box-shadow: 0px -4px 0 0 var(--top);
+}
+.pokeball-button--great::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(
+    transparent 30deg,
+    var(--stripe) 30deg 58deg,
+    transparent 58deg 302deg,
+    var(--stripe) 302deg 330deg,
+    transparent 330deg
+  );
+  border-radius: 50%;
+}
+
+.pokeball-button--ultra {
+  --top: #2e2e2e;
+  --stripe: #f7b100;
+}
+.pokeball-button--ultra::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48%;
+  background: linear-gradient(
+      to right,
+      var(--top) 10%,
+      var(--stripe) 10% 25%,
+      transparent 25% 75%,
+      var(--stripe) 75% 90%,
+      var(--top) 90%
+    ),
+    radial-gradient(circle at bottom, transparent 55%, var(--stripe) 55%);
+}
+
+.pokeball-button--master {
+  --top: #5a0da4;
+  --stripe: #b7426a;
+}
+.pokeball-button--master::after {
+  content: "M";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  font-family: "Cabin Condensed", sans-serif;
+  font-size: 0.5rem;
+  text-align: center;
+  background: radial-gradient(
+      closest-corner at 4px 5px,
+      var(--stripe) 80%,
+      transparent 80%
+    ),
+    radial-gradient(
+      farthest-corner at 94% 5px,
+      var(--stripe) 16%,
+      transparent 16%
+    );
+}
+
+.pokeball-button--love {
+  --top: #cb236f;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  transform: translate(0, 0) rotate(0, 0);
+}
+
+.pokeball-button--love::after {
+  content: "❤";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #ee83aa;
+  font-weight: bold;
+  font-family: "Cabin Condensed", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}

@@ -1,0 +1,128 @@
+
+// Pokeballs
+@-webkit-keyframes shak {
+
+  0%,
+  100% {
+    -webkit-transform: rotate(-10deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(10deg);
+  }
+}
+
+@-moz-keyframes shak {
+
+  0%,
+  100% {
+    -moz-transform: rotate(-10deg);
+  }
+
+  50% {
+    -moz-transform: rotate(10deg);
+  }
+}
+
+@keyframes bounce {
+  20% {
+    transform: translateY(-6px);
+  }
+
+  40% {
+    transform: translateY(0px);
+  }
+
+  80% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translate(-10px, 0) rotate(-20deg);
+  }
+  30% {
+    transform: translate(10px, 0) rotate(20deg);
+  }
+  50% {
+    transform: translate(-10px, 0) rotate(-10deg);
+  }
+  60% {
+    transform: translate(10px, 0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
+
+@keyframes blink {
+  from {
+    --button: #f1f1f1;
+    --blur: 0;
+  }
+  to {
+    --button: #ff7f7f;
+    --blur: 0.5px;
+  }
+}
+
+@keyframes searchBall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-160px, 0) rotate(-720deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+
+// Loader
+.u-flash {
+  animation: flash 3000ms infinite;
+}
+.loader {
+  position: fixed;
+  z-index: 1;
+  background: rgba(6, 45, 32, 0.4);
+  height: 100%;
+  width: 100%;
+
+  .pokeball {
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+  }
+}
+
+
+
+//  Pokemon img
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }50% {
+    transform: translate(0, 15px);
+  }100% {
+    transform: translate(0, 0px);
+  }
+}
+
+//  Card
+@keyframes bg-movement {
+  0% {
+    background-position: 0% 4%;
+  }
+  100% {
+    background-position: 86% 86%;
+  }
+}

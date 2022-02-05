@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Pokedex</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Montserrat&display=swap"
+    rel="stylesheet" />
+  <!-- Normalize -->
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+
+  <!-- Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+</head>
+
+<body id="body">
+  <header class="header"><h3>Julen Castillo</h3></header>
+
+  <div id="loader" class="loader-container is-hidden">
+    <div class="wrapper-loader">
+      <div class="pokeball-loader"></div>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="container">
+      <img class="logo" src="assets/logo.png" alt="logo" />
+    </div>
+
+    <div class="button-container">
+
+      <button id="allPokemons" class="btn btn-link" type="button">
+        <div class="empty"></div>
+        <div class="switch">
+          <div class="track">
+            <div class="pokeball">
+              <input class="shiny-switch" type="checkbox">
+              <div class="pokeball__contents">
+                <div class="pokeball__inner"></div>
+                <div class="pokeball__crossbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span>Pokemon List</span>
+      </button>
+
+      <button id="randomPokemon" class="btn btn-link" type="button">
+        <div class="empty"></div>
+        <div class="pokeball-button pokeball-button--ultra"></div>
+        <span>Randomizer Pokemon</span>
+      </button>
+
+      <button id="randomTeam" class="btn btn-link" type="button">
+        <div class="empty"></div>
+        <div class="pokeball-button pokeball-button--great"></div>
+        <span>Random Team</span>
+      </button>
+
+      <button id="clearPokedex" class="btn btn-link" type="button">
+        <div class="empty"></div>
+        <div class="pokeball-button pokeball-button--normal"></div>
+        <span>Clear Pokédex</span>
+      </button>
+
+      <div class="find-container btn">
+        <span>Pokemon Finder</span>
+        <div class="row">
+          <input id="pokeName" class="find" autofocus />
+          <button id="pokeFinder" class="find-button">
+            <div class="pokeball-button pokeball-button--love"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <ul id="pokedex" class="flex-container wrap"></ul>
+    <div class="pokedex-detail"></div>
+    </div>
+  </main>
+
+  <footer class="footer">Y los monstruos de bolsillo</footer>
+</body>
+
+</html>
